@@ -1,0 +1,34 @@
+.post-block-image {
+  overflow: auto;
+
+  figure {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+
+  &--left {
+
+    figure {
+      float: left;
+      margin-right: 20px;
+
+      @include media-max(map_get($grid-breakpoints, md)) {
+        float: none;
+        margin-right: 0;
+      }
+    }
+  }
+
+  &--right {
+
+    figure {
+      float: right;
+      margin-left: 20px;
+
+      @include media-max(map_get($grid-breakpoints, md)) {
+        float: none;
+        margin-left: 0;
+      }
+    }
+  }
+}

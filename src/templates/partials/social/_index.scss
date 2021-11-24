@@ -1,0 +1,41 @@
+.social {
+  @include flex($align-items: center);
+
+  &__item {
+    @include flex(center, center);
+    @include size(43px);
+
+    margin-right: 10px;
+    border-radius: 5px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+
+    &--linkedin-in {
+      background-color: #0077b5;
+    }
+
+    &--facebook {
+      background-color: #3b5998;
+    }
+
+    &--twitter {
+      background-color: #1da1f2;
+    }
+
+    &--youtube {
+      background-color: #cd201f;
+    }
+
+    &--instagram {
+      background-color: #262626;
+    }
+  }
+
+  &__icon {
+    color: var(--color-white);
+    font-size: 20px;
+  }
+}

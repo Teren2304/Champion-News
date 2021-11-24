@@ -1,0 +1,19 @@
+.login-button {
+  @include flex($align-items: center);
+
+  color: #c3c3c9;
+
+  &:hover {
+    color: var(--color-red);
+  }
+
+  &__icon {
+    margin-right: 5px;
+  }
+
+  &__text {
+    font-size: 14px;
+    font-weight: var(--typography-medium);
+  }
+}
+

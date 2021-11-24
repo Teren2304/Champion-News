@@ -1,0 +1,12 @@
+mixin blog-slider
+  .blog-slider&attributes(attributes)
+    .blog-slider__left
+      +button-arrow.button-arrow--prev.button-arrow--disabled
+    .blog-slider__right
+      +button-arrow.button-arrow--next
+    .row
+      - var n = 0;
+      while n < 4
+        .col-12.col-sm-6.col-lg-3
+          .blog-slider__item
+            +post-smart(true, false)(data=n++).post-smart--xs

@@ -1,0 +1,27 @@
+.header {
+  margin-bottom: 30px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 720px;
+
+  @include media-max(map_get($grid-breakpoints, md)) {
+
+    .post-banner {
+
+      &__img {
+        height: 127px;
+      }
+    }
+  }
+
+  @include media-max(map_get($grid-breakpoints, lg)) {
+    padding-bottom: 30px;
+    height: auto;
+  }
+
+  &--wide {
+    background-image: none;
+    height: auto;
+  }
+}

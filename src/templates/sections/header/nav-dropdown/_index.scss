@@ -1,0 +1,24 @@
+.nav-dropdown {
+  border-top: 3px solid var(--color-red);
+  box-shadow: 0 2px 8px 0 rgba(65, 68, 75, 0.3);
+  background-color: #f3f3f9;
+  padding: 20px 30px 30px;
+
+  &__tab {
+    padding-bottom: 20px;
+  }
+
+  &__option {
+    @include flex($align-items: center);
+
+    padding-top: 10px;
+
+    .button-arrow {
+      margin-right: 10px;
+    }
+  }
+
+  [class^='col-'] {
+    margin-bottom: 10px;
+  }
+}

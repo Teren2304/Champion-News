@@ -1,0 +1,15 @@
+.category {
+  display: inline-block;
+  border-radius: 3px;
+  background-color: var(--color-dark);
+  padding: 1px 7px;
+  text-transform: uppercase;
+  color: var(--color-white);
+  font-size: 12px;
+  font-weight: var(--typography-medium);
+
+  &:hover,
+  &--active {
+    background-color: var(--color-red);
+  }
+}

@@ -1,0 +1,32 @@
+mixin footer
+  footer.footer&attributes(attributes)
+    .container-fluid
+      .container
+        .row
+          .col-12.col-md-6.col-lg-4.footer__column
+            +logo(true)
+            p.footer__text Lorem ipsum dolor sit amet, percipit delicata forensibus id vel, vim an ocurreret evertitur. Possim ullamcorper vis ne, has et dicat veritus reprehendunt. Graeco torquatos vim ad, utroque evertitur consectetuer nec ex, ei vis dicam labore prompta. Sed cu agam elit soleat, sea fierent omittam ut. Tale atomorum pri te, erat semper torquatos ei vel.
+            +social
+          .col-12.col-md-6.col-lg-4.footer__column
+            - var n = 0;
+            while n < 3
+              .footer__post
+                +post-smart(true, true)(data=n++).post-smart--white
+          .col-12.col-sm-12.col-lg-4.footer__column
+            p.footer__subtitle Gallery
+            .row
+              - var n = 1;
+              while n < 7
+                .col-4.col-md-2.col-lg-4
+                  .banner.margin
+                    a(href="#").banner__link
+                      img(src="https://ld-wp73.template-help.com/wordpress/prod_18248/v1/wp-content/uploads/2018/03/thumb-sport-"+ n++ +".jpg" height="100").banner__img
+
+    .container-fluid
+      .container
+        .row
+          .col-12
+              p.footer__copyright
+                span Company
+                span ©. All rights reserved.
+

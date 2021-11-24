@@ -1,0 +1,126 @@
+.menu {
+  @include flex($align-items: center);
+
+  margin-right: 30px;
+
+  &__item {
+    padding: 0 15px;
+
+    &:hover,
+    &--active {
+
+      .menu {
+
+        &__link {
+          color: var(--color-red);
+        }
+
+        &__dropdown {
+          display: block;
+        }
+      }
+    }
+
+    @include media-max(map_get($grid-breakpoints, lg)) {
+      padding: 15px;
+      width: 100%;
+    }
+
+    &--submenu {
+      position: relative;
+    }
+  }
+
+  &__link {
+    @include flex($align-items: center);
+
+    text-transform: uppercase;
+    white-space: nowrap;
+    color: var(--color-dark);
+    font-family: var(--font-family-secondary);
+    font-size: 14px;
+    font-weight: var(--typography-bold);
+  }
+
+  &__icon {
+    margin-left: 8px;
+
+    @include media-max(map_get($grid-breakpoints, lg)) {
+      transform: rotateZ(-90deg);
+      margin-right: 0;
+      margin-left: auto;
+    }
+  }
+
+  &__close {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+    @include media-max(map_get($grid-breakpoints, lg)) {
+      display: inline-block;
+    }
+  }
+
+  &__dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    left: 0;
+    transition: 0.3s;
+    z-index: 3;
+    padding-top: 28px;
+
+    @include media-max(map_get($grid-breakpoints, lg)) {
+      display: none !important;
+    }
+  }
+
+  @include media-max(map_get($grid-breakpoints, lg)) {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: 0.3s;
+    z-index: 5;
+    margin: 0;
+    background-color: var(--color-white);
+    padding-top: 40px;
+    padding-left: 5px;
+    width: 320px;
+  }
+
+  &--active {
+    @include media-max(map_get($grid-breakpoints, lg)) {
+      transform: none;
+    }
+  }
+
+  &--vertical {
+    display: none;
+
+    @include media-max(map_get($grid-breakpoints, lg)) {
+      @include flex($align-items: center);
+
+      top: auto;
+      left: 0;
+      flex-direction: row;
+      transform: none;
+      box-shadow: 0 2px 8px 0 rgba(65, 68, 75, 0.3);
+      padding: 0;
+      width: 100%;
+      overflow-x: auto;
+
+      .menu {
+
+        &__item {
+          padding: 20px;
+          width: auto;
+        }
+      }
+    }
+  }
+}

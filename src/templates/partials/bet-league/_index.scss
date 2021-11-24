@@ -1,0 +1,30 @@
+.bet-league {
+  margin-bottom: 1px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__category {
+    @include flex($align-items: center);
+    @include size(100%, 35px);
+
+    background-color: rgba(#1c1c21, 0.9);
+    cursor: pointer;
+    padding: 0 10px 0 15px;
+    font-size: 13px;
+
+    &:hover {
+      background-color: #1c1c21;
+    }
+  }
+
+  &__text {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    flex-grow: 1;
+    color: var(--color-white);
+  }
+}

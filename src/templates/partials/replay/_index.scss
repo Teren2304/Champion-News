@@ -1,0 +1,32 @@
+.replay {
+
+  &__text,
+  &__label {
+    font-size: 14px;
+  }
+
+  &__text {
+    margin-bottom: 10px;
+  }
+
+  &__label {
+    margin-bottom: 5px;
+    color: rgba(147, 147, 153, 1);
+  }
+
+  &__textarea {
+    min-height: 150px;
+  }
+
+  &__button {
+    padding-right: 10px;
+    padding-left: 10px;
+    width: auto;
+    min-width: 100px;
+  }
+
+  &__checkbox {
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+}

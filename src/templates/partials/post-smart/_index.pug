@@ -1,0 +1,14 @@
+mixin post-smart(isSmall, isDate, isDescription)
+  .post-smart&attributes(attributes)
+    if isSmall
+      .post-smart__left
+        a(href="news.html").post-smart__link
+          img(src="https://ld-wp73.template-help.com/wordpress/prod_18248/v1/wp-content/uploads/2018/03/thumb-sport-"+ Math.floor(Math.random() * (20 - 1) + 1) +".jpg").post-smart__img
+    .post-smart__right
+      a(href="news.html").post-smart__title As More Japanese Take up Bodybuilding, a Veteran Chases a Championship
+      if isDate
+        a(href="news.html").post-smart__data
+          i(aria-hidden="true").far.fa-clock.post-smart__icon
+          span May 30, 2018
+      if isDescription
+        p.post-smart__description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium autem commodi, cupiditate esse, eveniet fugiat itaque iusto magnam modi molestias nihil nisi officiis pariatur, praesentium quaerat recusandae repellat similique veritatis.

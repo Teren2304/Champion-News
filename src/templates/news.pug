@@ -1,0 +1,94 @@
+---
+title: Portfolio
+lang: en
+---
+extends layouts/_layout
+
+block content
+  +header(true)#header
+  main
+    section.section
+      .container-fluid
+        .container
+          .content
+            .content__column.content__column--wide
+              .entry-category
+                 +category("Gym")
+                 p The estimated reading time is 4 minutes
+              .entry-header
+                 h1 P4P Update: Usyk, Rungvisai Big Movers Chocolatito Drops
+              .entry-meta
+                 +meta-link-user.meta-link--lg.meta-link--color-red
+                 +meta-link-date
+                 +meta-link-comments
+              .entry-content
+                .row
+                  .col-12
+                    figure
+                      img(width='100%' height='1134' src='https://ld-wp73.template-help.com/wordpress/prod_18248/v1/wp-content/uploads/2018/03/thumb-sport-34.jpg' alt='image' loading='lazy' srcset='https://ld-wp73.template-help.com/wordpress/prod_18248/v1/wp-content/uploads/2018/03/thumb-sport-34.jpg 2000w, https://ld-wp73.template-help.com/wordpress/prod_18248/v1/wp-content/uploads/2018/03/thumb-sport-34-300x170.jpg 300w, https://ld-wp73.template-help.com/wordpress/prod_18248/v1/wp-content/uploads/2018/03/thumb-sport-34-1024x581.jpg 1024w, https://ld-wp73.template-help.com/wordpress/prod_18248/v1/wp-content/uploads/2018/03/thumb-sport-34-768x435.jpg 768w, https://ld-wp73.template-help.com/wordpress/prod_18248/v1/wp-content/uploads/2018/03/thumb-sport-34-1536x871.jpg 1536w, https://ld-wp73.template-help.com/wordpress/prod_18248/v1/wp-content/uploads/2018/03/thumb-sport-34-370x210.jpg 370w' sizes='(max-width: 2000px) 100vw, 2000px')
+                    p.has-drop-cap building a computer that could match the power of the human brain has long been a goal of scientists. BM (International Business Machines Corporation) has been around for somewhat over one hundred years ago and since then IBM has established itself as one of the best computer brands worldwide serving one hundred and seventy different countries. There is a huge disparity between the human brain’s cognitive capability and ultra-low power consumption when compared to today’s computers. These brain-inspired chips could transform mobility, via sensory and intelligent applications that can fit in the palm of your hand but without the need for Wi-Fi. This achievement underscores our leadership role at pivotal transformational moments in the history of computing via long-term investment in organic innovation.
+                    p When someone says their computer is low on memory… what exactly do they mean? Are they running out of space to save files, or is the computer running slow?
+                    p System RAM (Random Access Memory) – this is generally in the range of 256 megabytes to 8 gigabytes on recent systems.  This is where programs reside and run from while the computer is running.  When you shut it down, it gets cleared – temporary usage, so to speak.
+                    +blockquote
+                    ul
+                      li Structured Analysis of the Situation;
+                      li Hackers Can Steal Your Financial Info with Your Name and Email;
+                      li He explained how well he will succeed in using diplomacy;
+                      li That is confirmed by President himself.
+                    figure.image
+                      img(src='https://ld-wp73.template-help.com/wordpress/prod_18248/v1/wp-content/uploads/2018/03/thumb-sport-30.jpg' alt='')
+                    p
+                      strong He explained how well he will succeed in using diplomacy
+                      |  instead of Bush&rsquo;s warmongering, strengthen old alliances and, all in all, spruce up US international image to a better one. He said:
+                      em &ldquo;living our values doesn&rsquo;t make us weaker, it makes us safer and it makes us stronger.&rdquo;
+                    +blockquote
+                    p Even GOPers were approving of the path POTUS has undertaken then…at least of the rhetorics style, which he so Hollywood-esquely told it in.
+                    h5 Structured Analysis of the Situation
+                    p
+                      | All the great plans that could have made him a truly!{' '}
+                      a(href='#') Reforming President
+                      | , were not completed and so the 44th President of US will most likely remain an &ldquo;intermediate&rdquo; part of American history. That is confirmed by President himself, as he now constantly compares himself (unfavorably) to truly great US leaders, like Lincoln or!{' '}
+                      em Franklin Delano Roosevelt
+                    +post-block-image.post-block-image--right
+                    +post-block-image.post-block-image--left
+                    ol
+                      li Structured Analysis of the Situation;
+                      li Hackers Can Steal Your Financial Info with Your Name and Email;
+                      li He explained how well he will succeed in using diplomacy;
+                      li That is confirmed by President himself.
+
+              .entry-tag
+                +tag("Tags").tag--active
+                - var n = 0;
+                  while n < 4
+                    +tag("Barak Obama")
+                    +tag("Donald Thrump")(data=n++)
+
+              .entry-navigation
+                +nav-link-left.nav-link--left
+                +nav-link-right.nav-link--right
+              .entry-footer
+                .row
+                  .col-12
+                    +subtitle("Other Post", 'tab')
+                  - var n = 0;
+                  while n < 8
+                    .col-12.col-md-6
+                      +post-smart(true, true, false)(data=n++)
+                  .col-12
+                    +subtitle("Leave a Replay", false)
+                  .col-12
+                    +replay
+
+
+            .content__column.content__column--sm
+              aside.aside
+                .column
+                  .column__title
+                    +subtitle("Popular Publications", false).subtitle--border
+                  .column__wrap
+                    - var n = 0;
+                    while n < 4
+                      .column__block
+                        +post-smart(false, false, false)(data=n++).post-smart--sm
+

@@ -1,0 +1,33 @@
+.top-typing {
+  @include flex(center, center);
+
+  position: relative;
+  padding-right: 10px;
+  width: 332px;
+  overflow: hidden;
+  animation: typing 5s forwards infinite ease-in-out;
+
+  &::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: var(--color-white);
+    content: '_';
+  }
+
+  &__wrap {
+    overflow: hidden;
+    text-align: left;
+    white-space: nowrap;
+    color: var(--color-white);
+    font-size: 14px;
+    font-weight: var(--typography-regular);
+  }
+}
+
+@keyframes typing {
+
+  from {
+    width: 0;
+  }
+}

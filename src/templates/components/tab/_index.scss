@@ -1,0 +1,41 @@
+.tab {
+
+  &__header {
+    @include flex($align-items: center);
+  }
+
+  &__link {
+    margin-right: 30px;
+    color: #939399;
+    font-size: 14px;
+    font-weight: var(--typography-slim);
+
+    &:hover,
+    &--active {
+      color: var(--color-red);
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    @include media-max(map_get($grid-breakpoints, sm)) {
+      margin-right: 10px;
+    }
+  }
+
+  &--vertical {
+
+    .tab {
+
+      &__header {
+        @include flex($align-items: flex-start, $direction: column);
+      }
+
+      &__link {
+        margin-bottom: 15px;
+        margin-left: 0;
+      }
+    }
+  }
+}

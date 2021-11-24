@@ -1,0 +1,15 @@
+mixin top
+  .top&attributes(attributes)
+    .container-fluid
+      .container
+        .top__wrapper
+          .top__block
+            .top__button
+              +button('live').button--sm
+            .top__marquue
+              +top-typing
+          .top__block
+            .top__social
+              +social-custom
+            .top__login
+              +login-button.js-login-button

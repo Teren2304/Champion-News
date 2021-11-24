@@ -1,0 +1,50 @@
+.footer {
+  background-color: var(--color-dark);
+  padding: 45px 0 15px;
+  color: #939398;
+  font-size: 12px;
+
+  &__post {
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    margin: 20px 0;
+  }
+
+  &__subtitle {
+    margin-bottom: 10px;
+    color: var(--color-white);
+    font-size: 18px;
+    font-weight: var(--typography-medium);
+  }
+
+  &__copyright {
+    padding: 50px 0;
+
+    span {
+
+      &:first-child {
+        margin-right: 5px;
+        color: var(--color-red);
+      }
+    }
+  }
+
+  &__column {
+    @include media-max(map_get($grid-breakpoints, md)) {
+      margin-bottom: 30px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      .banner {
+
+        &__img {
+          height: 80px;
+        }
+      }
+    }
+  }
+}

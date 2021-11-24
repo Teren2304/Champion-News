@@ -1,0 +1,33 @@
+mixin nav-dropdown-var-1
+  .nav-dropdown&attributes(attributes)
+    .row
+      .col-12
+        .nav-dropdown__tab
+          +tab
+      .col-12
+        .row
+          - var n = 0;
+          while n < 4
+            .col-12.col-md-6.col-lg-3
+              +post(false, 220)(data=n++).post--sm
+      .col-12
+        .nav-dropdown__option
+          +button-arrow.button-arrow--prev.button-arrow--disabled
+          +button-arrow.button-arrow--next
+
+
+mixin nav-dropdown-var-2
+  .nav-dropdown&attributes(attributes)
+    .row
+      .col-3
+        .nav-dropdown__tab
+          +tab.tab--vertical
+      .col-9
+        .row
+          - var n = 0;
+          while n < 4
+            .col-12.col-md-6.col-lg-3
+              +post(false, 150)(data=n++).post--sm
+          .nav-dropdown__option
+            +button-arrow.button-arrow--prev.button-arrow--disabled
+            +button-arrow.button-arrow--next

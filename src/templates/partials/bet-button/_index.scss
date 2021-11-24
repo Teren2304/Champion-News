@@ -1,0 +1,19 @@
+.bet-button {
+  @include size(100%, 35px);
+  @include flex($align-items: center);
+
+  transition: 0.3s;
+  margin-bottom: 1px;
+  background-color: #1c1c21;
+  padding: 0 15px;
+
+  &:hover,
+  &--active {
+    background-color: darken(#1c1c21, 10%);
+  }
+
+  &__text {
+    color: var(--color-white);
+    font-size: 12px;
+  }
+}

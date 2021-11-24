@@ -1,0 +1,12 @@
+mixin nav
+  nav.nav&attributes(attributes)
+    .container-fluid
+      .container
+        .nav__wrapper
+          .row
+            .col-12.col-lg-4.nav__block
+                +logo
+            .col-12.col-lg-8.nav__block
+                +menu-1
+                +search
+                +toggle.js-toggle

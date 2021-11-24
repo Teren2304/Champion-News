@@ -1,0 +1,108 @@
+.post-smart {
+  @include flex;
+
+  &__title,
+  &__data {
+    display: block;
+  }
+
+  &__description,
+  &__data {
+    font-size: 12px;
+  }
+
+  &__left {
+    margin-right: 15px;
+  }
+
+  &__right {
+    @include flex($direction: column);
+  }
+
+  &__title {
+    font-size: 14px;
+    font-weight: var(--typography-medium);
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-decoration: none;
+    color: var(--color-dark);
+
+    &:hover {
+      color: var(--color-red) !important;
+    }
+  }
+
+  &__description {
+    margin-top: 5px;
+  }
+
+  &__data {
+    opacity: 0.6;
+    padding: 2px 0;
+
+    * {
+      transition: 0.3s;
+    }
+
+    &:hover {
+      opacity: 1;
+
+      * {
+        color: var(--color-azure) !important;
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+
+  &__img {
+    @include size(110px, 78px);
+
+    display: block;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__icon {
+    margin-right: 5px;
+    color: var(--color-text);
+  }
+
+  &--white {
+
+    .post-smart {
+
+      &__title,
+      &__data {
+        color: var(--color-white);
+      }
+    }
+  }
+
+  &--xs {
+
+    .post-smart {
+
+      &__img {
+        @include size(82px, 58px);
+      }
+    }
+  }
+
+  &--sm {
+    padding: 10px 0;
+
+    .post-smart {
+
+      &__right {
+        flex-direction: column-reverse;
+      }
+    }
+  }
+}

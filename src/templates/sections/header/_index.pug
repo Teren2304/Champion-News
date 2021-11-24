@@ -1,0 +1,22 @@
+mixin header(wide)
+  header.header(class=wide && 'header--wide')&attributes(attributes)
+    +top
+    +nav(class=wide && 'nav--wide')
+    .container-fluid
+      .container
+        if wide
+          .row
+            .col-12
+              +breadcrumbs
+        else
+          .row
+            .col-12.col-lg-6
+              .row
+                .col-12
+                  +post-banner(440)
+            .col-12.col-lg-6
+              .row
+                - var n = 0;
+                while n < 4
+                  .col-12.col-md-6
+                    +post-banner(210)(data=n++)

@@ -1,0 +1,46 @@
+.meta-link {
+  @include flex($align-items: center);
+
+  &:hover {
+
+    .meta-link {
+
+      &__text {
+        color: var(--color-primary);
+      }
+    }
+  }
+
+  &__text {
+    transition: 0.3s;
+  }
+
+  &__icon {
+    margin-right: 10px;
+    color: rgba(180, 180, 186, 1);
+  }
+
+  &__text {
+    font-size: 12px;
+  }
+
+  &--color-red {
+
+    .meta-link {
+
+      &__text {
+        color: var(--color-red);
+      }
+    }
+  }
+
+  &--lg {
+
+    .meta-link {
+
+      &__icon {
+        font-size: 28px;
+      }
+    }
+  }
+}

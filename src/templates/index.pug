@@ -1,23 +1,133 @@
 ---
-title: enestech | IT-holding
+title: Portfolio
 lang: en
-hasLink: false
-isHeaderTransparent: true
 ---
 extends layouts/_layout
 
 block content
+  +header(false)(style="background-image: url('https://ld-wp73.template-help.com/wordpress/prod_18248/v1/wp-content/uploads/2018/03/thumb-sport-34.jpg')")#header
   main
-    include sections/_hero-section
-    include sections/_worldwide
-    include sections/_arenas
-    include sections/_tops
-    include sections/_offer
+    section.section
+      .container-fluid
+        .container
+          +blog-slider
+          hr.hr
+          .content
+            .content__column.content__column--wide
+              .column
+                .column__title
+                  +subtitle("Top News", 'arrows').subtitle--border
+                .column__wrap
+                  .row
+                    - var n = 0;
+                    while n < 4
+                      .col-12.col-md-6
+                        +post-banner(249)(data=n++)
+              .column
+                .column__title
+                  +subtitle("Recent News", 'tab').subtitle--border
+                .column__wrap
+                  .row
+                    .col-12.col-md-6
+                      .banner.margin
+                        .banner__category
+                          +category
+                        a(href="#").banner__link
+                          img(src="https://ld-wp73.template-help.com/wordpress/prod_18248/v1/wp-content/uploads/2018/03/thumb-sport-26.jpg" height="240").banner__img
 
-    hr.u-section-hr.u-hidden-sm.u-mt-16.u-mb-48.u-my-64-md
+                    .col-12.col-md-6
+                      +post-smart(false, true, true)
 
-    include sections/_membership
+                    - var n = 0;
+                    while n < 4
+                      .col-12.col-md-6
+                        +post-smart(true, true)(data=n++)
 
-    hr.u-section-hr.u-hidden-sm.u-my-48-sm.u-my-64-md
+              .column
+                .column__title
+                  +subtitle("Football", 'arrows').subtitle--border
+                .column__wrap
+                  .row
+                    - var n = 0;
+                    while n < 12
+                      .col-12.col-md-4
+                        +post(true, 120)(data=n++).post--sm
 
-    include sections/_contact-us
+              .banner
+                a(href="#").banner__link
+                  img(src="https://ld-wp73.template-help.com/wordpress/prod_18248/v1/wp-content/uploads/2018/03/sport-banner-2.png" height="90").banner__img
+              .column
+                .column__title
+                  +subtitle("Recommended", 'tab').subtitle--border
+                .column__wrap
+                  .row
+                    - var n = 0;
+                    while n < 9
+                      .col-12.col-sm-6.col-md-4
+                        +post(false, 150)(data=n++).post--sm
+
+
+            .content__column.content__column--sm
+              aside.aside
+                .banner
+                  a(href="#").banner__link
+                    img(src="https://ld-wp73.template-help.com/wordpress/prod_18248/v1/wp-content/uploads/2018/03/sport-banner-3.png" height="370").banner__img
+                .column
+                  .column__title
+                    +subtitle("Popular Publications", false).subtitle--border
+                  .column__wrap
+                    - var n = 0;
+                    while n < 4
+                      .column__block
+                        +post-smart(false, true)(data=n++).post-smart--sm
+
+    section.section.section--image(style="background-image: url(https://ld-wp73.template-help.com/wordpress/prod_18248/v1/wp-content/uploads/2018/03/thumb-sport-15.jpg);")
+      .container-fluid
+        .container
+          .youtube-player#youtube-player
+
+    section.section
+      .container-fluid
+        .container
+          .content
+            .content__column.content__column--wide
+              .column
+                .column__title
+                  +subtitle("Gym", 'tab').subtitle--border
+                .column__wrap
+                  .row
+                    .col-12.col-md-6
+                      +post-banner(400)
+                    .col-12.col-md-6
+                      - var n = 0;
+                      while n < 4
+                        +post-smart(false, true)(data=n++).post-smart--sm
+
+              .column
+                .column__title
+                  +subtitle("Latest", false).subtitle--border
+                .column__wrap
+                  .row
+                    - var n = 0;
+                    while n < 8
+                      .col-12.col-sm-6
+                        +post(false, 240)(data=n++)
+            .content__column.content__column--sm
+              aside.aside
+                .column
+                  .column__title
+                    +subtitle("Most Viewed", false).subtitle--border
+                  .column__wrap
+                    - var n = 0;
+                      while n < 4
+                        .column__block
+                          +post-smart(true, true)(data=n++)
+
+                .column
+                  .column__title
+                    +subtitle("Newsletter", false).subtitle--border
+                  .column__wrap
+                    .column__block
+                      +newsletter
+    +modal
+    +menu-2.menu--vertical

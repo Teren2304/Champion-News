@@ -1,0 +1,49 @@
+.top {
+  @include size(100%, 52px);
+  @include flex($align-items: center);
+
+  position: relative;
+  background-color: #1c1c21;
+
+  &__wrapper {
+    @include flex(space-between, center);
+
+    @include media-max(map_get($grid-breakpoints, md)) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__block {
+    @include flex($align-items: center);
+
+    height: 52px;
+    overflow: hidden;
+
+    &:last-child {
+      @include media-max(map_get($grid-breakpoints, md)) {
+        justify-content: space-between;
+      }
+    }
+
+    @include media-max(map_get($grid-breakpoints, md)) {
+      @include size(100%, 45px);
+    }
+  }
+
+  &__button {
+    margin-right: 10px;
+  }
+
+  &__marquue {
+    flex-grow: 1;
+  }
+
+  &__social {
+    margin-right: 60px;
+  }
+
+  @include media-max(map_get($grid-breakpoints, md)) {
+    border-bottom: 1px solid #ddd;
+    height: 90px;
+  }
+}

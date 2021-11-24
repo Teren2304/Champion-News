@@ -1,0 +1,21 @@
+mixin replay
+  .replay&attributes(attributes)
+    .row
+      .col-12
+        p.replay__text Your email address will not be published. Required fields are marked *
+        p.replay__label Comment
+        +textarea.textarea.replay__textarea
+      .col-12.col-md-6
+        p.replay__label Name *
+        +field(type="text").replay__field
+      .col-12.col-md-6
+        p.replay__label E-mail
+        +field(type="email").replay__field
+      .col-12
+        p.replay__label Website
+        +field(type="email").replay__field
+      .col-12
+        input(type="checkbox" name="save" id="checkbox-save").checkbox.replay__checkbox
+        label(for="checkbox-save").replay__label Save my name, email, and website in this browser for the next time I comment.
+      .col-12
+        +button('Send').replay__button

@@ -1,0 +1,18 @@
+mixin post-banner(height)
+  .post-banner&attributes(attributes)
+    .post-banner__category
+      +category
+    .post-banner__top
+      a(href="#").post-banner__link
+        if height
+          img(src="https://ld-wp73.template-help.com/wordpress/prod_18248/v1/wp-content/uploads/2018/03/thumb-sport-"+ Math.floor(Math.random() * (20 - 1) + 1) +".jpg" height=height + 'px').post-banner__img
+        else
+          img(src="https://ld-wp73.template-help.com/wordpress/prod_18248/v1/wp-content/uploads/2018/03/thumb-sport-"+ Math.floor(Math.random() * (20 - 1) + 1) +".jpg").post-banner__img
+    .post-banner__content
+      .post-banner__center
+        a(href="#").post-banner__data
+          span May 30, 2018
+        a(href="#").post-banner__comments
+          span 0
+      .post-banner__bottom
+        a(href="#").post-banner__title As More Japanese Take up Bodybuilding, a Veteran Chases a Championship

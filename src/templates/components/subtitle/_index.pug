@@ -1,0 +1,10 @@
+mixin subtitle(text, content)
+  .subtitle&attributes(attributes)
+    p.subtitle__text= text
+    if content
+      .subtitle__options
+        if content === 'tab'
+          +tab
+        else if content === 'arrows'
+          +button-arrow.button-arrow--prev.button-arrow--disabled
+          +button-arrow.button-arrow--next

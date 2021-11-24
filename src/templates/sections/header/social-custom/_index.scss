@@ -1,0 +1,14 @@
+.social-custom {
+  @include flex($align-items: center);
+
+  &__link {
+    margin: 0 10px;
+    color: #727277;
+    font-size: 14px;
+
+    &:hover,
+    &--active {
+      color: var(--color-red);
+    }
+  }
+}

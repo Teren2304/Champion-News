@@ -1,0 +1,5 @@
+mixin newsletter
+  .newsletter&attributes(attributes)
+    p.newsletter__text Subscribe to our newsletter to stay updated.
+    +field(type="email", placeholder="E-mail").newsletter__field
+    +button('Subscribe').newsletter__button

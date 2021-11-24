@@ -1,0 +1,18 @@
+.button {
+  @include size(100%, 47px);
+
+  border-radius: 3px;
+  background-color: var(--color-red);
+  text-transform: uppercase;
+  color: var(--color-white);
+  font-family: var(--font-family-secondary);
+  font-weight: var(--typography-bold);
+
+  &--sm {
+    @include size(auto);
+
+    border-radius: 1px;
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+}

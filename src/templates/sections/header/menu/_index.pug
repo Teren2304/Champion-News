@@ -1,0 +1,48 @@
+mixin menu-1
+  menu.menu&attributes(attributes)
+    .menu__close.js-menu-close
+      i.fa.fa-times
+    .menu__item
+      a(href="#").menu__link home
+    .menu__item.menu__item--dropdown
+      a(href="#").menu__link
+        span.menu__text racing
+        i.fa.fa-angle-down.menu__icon
+      .menu__dropdown
+        +nav-dropdown-var-2
+    .menu__item.menu__item--dropdown
+      a(href="#").menu__link
+        span.menu__text basketball
+        i.fa.fa-angle-down.menu__icon
+      .menu__dropdown
+        +nav-dropdown-var-1
+    .menu__item.menu__item--submenu
+      a(href="#").menu__link
+        span.menu__text rugby
+        i.fa.fa-angle-down.menu__icon
+      .menu__dropdown
+        +sub-menu
+    .menu__item.menu__item--submenu
+      a(href="#").menu__link
+        span.menu__text extreme
+        i.fa.fa-angle-down.menu__icon
+      .menu__dropdown
+        +sub-menu
+
+
+mixin menu-2
+  menu.menu&attributes(attributes)
+    .menu__item
+      a(href="#").menu__link home
+    .menu__item
+      a(href="#").menu__link
+        span.menu__text racing
+    .menu__item
+      a(href="#").menu__link
+        span.menu__text basketball
+    .menu__item
+      a(href="#").menu__link
+        span.menu__text rugby
+    .menu__item
+      a(href="#").menu__link
+        span.menu__text extreme
